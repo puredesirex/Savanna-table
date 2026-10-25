@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Savanna Table — Restaurant &amp; Lounge</title>
+<meta name="description" content="Savanna Table is a fictional African restaurant and lounge: a demo website by Godwin Digital Solution.">
+<link rel="icon" href="assets/img/jollof.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Jost:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap bar">
+    <a class="brand" href="#home" aria-label="Savanna Table, home"><span class="mark" aria-hidden="true">S</span><span class="brand-text">Savanna Table<small>Restaurant &amp; Lounge</small></span></a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav id="nav" class="nav" aria-label="Main">
+      <a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#reservations">Reservations</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" id="home">
+  <img class="hero-img" src="assets/img/hero.svg" alt="" width="800" height="600">
+  <div class="wrap hero-in">
+    <h1>Experience the Taste of Africa</h1>
+    <p>Authentic flavours, fresh ingredients, and memorable dining experiences.</p>
+    <div class="btns"><a class="btn gold" href="#menu">Explore Our Menu</a><a class="btn ghost" href="#reservations">Reserve a Table</a></div>
+  </div>
+</section>
+
+<section class="sec" id="popular"><div class="wrap">
+  <h2>Popular dishes</h2><p class="lead">The plates our guests come back for. Prices are editable samples.</p>
+  <div class="grid cards" id="popularGrid"></div>
+</div></section>
+
+<section class="sec dark" id="menu"><div class="wrap">
+  <h2>Our menu</h2><p class="lead">Choose a category to browse.</p>
+  <div class="filters" role="group" aria-label="Menu categories" id="filters"></div>
+  <p class="count" id="menuCount" aria-live="polite"></p>
+  <div class="grid cards" id="menuGrid"></div>
+</div></section>
+
+<section class="sec" id="about"><div class="wrap split">
+  <img src="assets/img/chef.svg" alt="Illustration of a chef's plating station" loading="lazy" width="800" height="600">
+  <div>
+    <h2>Born from the market, finished at the table</h2>
+    <p>Savanna Table began as a family idea: cook the dishes of West Africa the way they are made at home, with the care of a fine dining kitchen. Our chefs grind their own pepper blends, smoke their own fish, and buy greens, tomatoes and peppers from growers they know by name.</p>
+    <p>Every meal is built on slow-cooked stews, open-flame grilling and spices that carry a story. Our hosts treat each guest like family, so a table here is never rushed.</p>
+    <p>Whether it is a quiet dinner, a birthday, or an evening in the lounge, we aim to make it one you remember.</p>
+    <p class="note">Savanna Table is a fictional business created for a portfolio demonstration.</p>
+  </div>
+</div></section>
+
+<section class="sec dark" id="gallery"><div class="wrap">
+  <h2>Gallery</h2><p class="lead">Interiors, plates, and the people behind them.</p>
+  <ul class="gallery">
+    <li class="wide"><img src="assets/img/interior.svg" alt="Main dining room with warm lighting" loading="lazy" width="800" height="600"></li>
+    <li><img src="assets/img/jollof.svg" alt="Jollof rice plate" loading="lazy" width="800" height="600"></li>
+    <li><img src="assets/img/chef.svg" alt="Chef plating a dish" loading="lazy" width="800" height="600"></li>
+    <li><img src="assets/img/lounge.svg" alt="Lounge seating area" loading="lazy" width="800" height="600"></li>
+    <li class="wide"><img src="assets/img/table.svg" alt="A set table for guests" loading="lazy" width="800" height="600"></li>
+    <li><img src="assets/img/suya.svg" alt="Suya platter" loading="lazy" width="800" height="600"></li>
+  </ul>
+</div></section>
+
+<section class="sec" id="reservations"><div class="wrap split">
+  <div>
+    <h2>Reserve a table</h2>
+    <p>Tell us when you would like to visit. This form is a frontend demonstration and does not send data to any server. After you complete it, you can send the details by WhatsApp to confirm.</p>
+    <a class="btn gold" id="waDirect" href="https://wa.me/2347049625916?text=Hello%2C%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener">Reserve on WhatsApp</a>
+  </div>
+  <form id="resForm" novalidate>
+    <div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required><span class="err" id="e-name"></span></div>
+    <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span class="err" id="e-phone"></span></div>
+    <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required><span class="err" id="e-email"></span></div>
+    <div class="row">
+      <div class="field"><label for="date">Date</label><input id="date" name="date" type="date" required><span class="err" id="e-date"></span></div>
+      <div class="field"><label for="time">Time</label><select id="time" name="time" required><option value="">Select</option></select><span class="err" id="e-time"></span></div>
+    </div>
+    <div class="field"><label for="guests">Number of guests</label><select id="guests" name="guests" required><option value="">Select</option></select><span class="err" id="e-guests"></span></div>
+    <div class="field"><label for="notes">Special requests (optional)</label><textarea id="notes" name="notes" rows="3"></textarea></div>
+    <button class="btn gold" type="submit">Check my reservation</button>
+    <div class="confirm" id="confirm" tabindex="-1" hidden></div>
+  </form>
+</div></section>
+
+<section class="sec dark" id="testimonials"><div class="wrap">
+  <h2>What guests say</h2><p class="lead">Sample testimonials, written to show the layout. They are fictional and not real reviews.</p>
+  <div class="grid three">
+    <figure class="quote"><blockquote>The jollof had real smoke in it. We stayed two hours longer than planned.</blockquote><figcaption>Sample guest A, birthday dinner</figcaption></figure>
+    <figure class="quote"><blockquote>Warm service, a calm room, and the egusi tasted like my grandmother's.</blockquote><figcaption>Sample guest B, family lunch</figcaption></figure>
+    <figure class="quote"><blockquote>The lounge on a Friday night is the best seat in town for suya and good music.</blockquote><figcaption>Sample guest C, evening out</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="sec" id="contact"><div class="wrap split">
+  <div>
+    <h2>Opening hours</h2>
+    <table class="hours"><tbody>
+      <tr><th scope="row">Monday – Thursday</th><td>12:00 – 22:00</td></tr>
+      <tr><th scope="row">Friday – Saturday</th><td>12:00 – 00:00</td></tr>
+      <tr><th scope="row">Sunday</th><td>13:00 – 21:00</td></tr>
+    </tbody></table>
+    <p class="note">Sample hours. Edit them before real use.</p>
+  </div>
+  <div>
+    <h2>Contact</h2>
+    <p><strong>Address:</strong> [Restaurant address goes here]</p>
+    <p><strong>Phone / WhatsApp:</strong> <a href="tel:+2347049625916" data-tel>+234 704 962 5916</a></p>
+    <p><strong>Email:</strong> <a href="mailto:hello@example.com" data-mail>hello@example.com</a></p>
+    <a class="btn gold" id="waContact" href="https://wa.me/2347049625916" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    <p class="note">The phone number is the developer's demo number. Replace it with the owner's number before real use.</p>
+  </div>
+</div></section>
+</main>
+
+<footer class="footer"><div class="wrap fgrid">
+  <div><a class="brand" href="#home"><span class="mark" aria-hidden="true">S</span><span class="brand-text">Savanna Table<small>Restaurant &amp; Lounge</small></span></a><p class="note">A portfolio project by Godwin Digital Solution.</p></div>
+  <div><h3>Explore</h3><ul><li><a href="#home">Home</a></li><li><a href="#menu">Menu</a></li><li><a href="#about">About</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#reservations">Reservations</a></li><li><a href="#contact">Contact</a></li></ul></div>
+  <div><h3>Hours</h3><p>Mon–Thu 12:00–22:00<br>Fri–Sat 12:00–00:00<br>Sun 13:00–21:00</p></div>
+  <div><h3>Contact</h3><p>+234 704 962 5916<br>hello@example.com</p>
+    <ul class="social"><li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://x.com/" target="_blank" rel="noopener">X</a></li></ul></div>
+</div>
+<p class="copy wrap">&copy; <span id="year">2026</span> Savanna Table (fictional). All rights reserved.</p></footer>
+
+<a class="wa-float" id="waFloat" href="https://wa.me/2347049625916" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11 19.8L3 29l6.4-2A13 13 0 1 0 16 3zm0 2.4A10.6 10.6 0 1 1 9.9 24l-.4-.2-3.700 1.200 1.200-3.600-.3-.4A10.600 10.600 0 0 1 16 5.400zm-4 5.200c-.3 0-.7.100-1 .5-.4.400-1.300 1.300-1.300 3.100s1.300 3.600 1.500 3.800c.2.300 2.600 4.100 6.400 5.600 3.100 1.200 3.700 1 4.400.9.700-.1 2.200-.9 2.500-1.800.3-.9.300-1.600.2-1.800-.1-.2-.3-.3-.7-.5l-2.300-1.100c-.3-.1-.5-.2-.8.200l-1 1.200c-.2.300-.4.300-.8.100-.4-.2-1.500-.6-2.900-1.800-1.100-1-1.800-2.200-2-2.500-.2-.4 0-.6.200-.8l.5-.6c.2-.2.2-.4.400-.6.100-.3.100-.5 0-.7l-1-2.400c-.3-.6-.5-.5-.8-.5z"/></svg></a>
+<script src="script.js"></script>
+</body>
+</html>
