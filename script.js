@@ -31,7 +31,7 @@ const wa = text => `https://wa.me/${CONFIG.whatsappNumber}` + (text ? `?text=${e
 
 function card(m){
   const el = document.createElement("article"); el.className = "card";
-  el.innerHTML = `<img src="assets/img/${m.i}.svg" alt="${m.n}" loading="lazy" width="800" height="600"><div class="card-b"><h3></h3><p></p><span class="price">${naira(m.p)}</span></div>`;
+  el.innerHTML = `<img src="assets/img/${m.i}.png" alt="${m.n}" loading="lazy" width="800" height="600" onerror="this.onerror=null;this.src=this.src.replace('.png','.svg')"><div class="card-b"><h3></h3><p></p><span class="price">${naira(m.p)}</span></div>`;
   el.querySelector("h3").textContent = m.n; el.querySelector("p").textContent = m.d; return el;
 }
 /* Popular dishes */

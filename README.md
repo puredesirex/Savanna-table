@@ -11,13 +11,13 @@ savanna-table/
 ├── style.css
 ├── script.js
 ├── README.md
-└── assets/img/   (local SVG images)
+└── assets/img/   (PNG photos + SVG fallbacks)
 ```
 
 ## Important notes
 - **WhatsApp number:** `+2347049625916` is the developer's demo number. **Replace it with the restaurant owner's number before real use** (see below).
 - **Reservations are a frontend demo.** The form sends nothing to a server. After validation, the guest taps a button that opens WhatsApp with the details pre-filled.
-- **Images:** the bundled images are original local SVG plate illustrations in the brand palette, not photographs, because photos could not be downloaded when this project was built. To use real photography, put your own `.jpg`/`.webp` files in `assets/img/` and change the `src` paths in `index.html` and the `i:` names in `script.js` (for example `i:"jollof"` loads `assets/img/jollof.svg`; change the `.svg` in the `card()` function to `.jpg`). Use licensed or self-shot photos only, and compress them (under 200 KB each).
+- **Images:** the site loads `assets/img/NAME.png` (hero, jollof, egusi, tilapia, suya, fried-rice, pepper-soup, starter, drink, dessert, interior, chef, lounge, table). If a PNG is missing, it automatically falls back to the matching `.svg` illustration, so the site never shows a broken image. Upload your PNGs to `assets/img/` using the exact lowercase names. PNGs from AI generators are often 2–6 MB; compress them later (e.g. squoosh.app) for faster loading on mobile data.
 - Restaurant, reviews, hours, prices and email are fictional samples. The address is a placeholder.
 
 ## Editing restaurant details
